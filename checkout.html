@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+	<title>checkout</title>
+	<!-- fonts -->
+	<link rel="shortcut icon" href="#">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- css -->
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<!-- header -->
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<nav class="menu-top d-flex align-items-center justify-content-between">
+					<div class="col-2">
+						<a class="logo" href="#">
+							<img src="img/header/menu/logo_header.svg" alt="Womazing">
+						</a>
+					</div>
+					<div class="col-5">				
+						<ul class="menu-list d-flex">
+							<li class="menu-list_item">
+								<a class="menu-list_item__link" href="#">
+									Главная
+								</a>
+							</li>
+							<li class="menu-list_item">
+								<a href="#">
+									Магазин
+								</a>
+							</li>
+							<li class="menu-list_item">
+								<a href="#">
+									О бренде
+								</a>
+							</li>
+							<li class="menu-list_item">
+								<a href="#">
+									Контакты
+								</a>
+							</li>
+						</ul>			
+					</div>
+					<div class="col-3 d-flex justify-content-between">
+						<div class="phone-header d-flex align-items-center">
+							<button class="button-phone" type="button">	
+							</button>
+							<a href="tel:+74958235412">
+								+7 (495) 823-54-12
+							</a>
+						</div>
+						<a class="bag" href="#">
+							<img src="img/header/menu/shopping_bags.svg" alt="bag">
+						</a>
+					</div>	
+				</nav>
+			</div>
+		</div>
+	</header>
+	<!-- section-2 -->
+	<main class="checkout">
+		<div class="container">
+			<div class="row">
+				<h1>
+					Оформление заказа
+				</h1>
+				<div class="path">
+					<a href="home.html">
+						Главная 
+					</a>
+					<span class="path_span">&#8212;</span>
+					<span class="path_span__two">Оформление заказа</span>
+				</div>
+			</div>
+			<div class="row">
+				<form id="form" class="form-order form__body d-flex" action="sendmail.php" method="post">
+					<div class="block-left col-7">
+						<div class="buyer">
+							<h3>
+								Данные покупателя
+							</h3>
+							<input class="buyer_input _req" type="text" name="name" placeholder="Имя">
+							<input class="buyer_input _req _email" type="text" name="email" placeholder="E-mail">
+							<input class="buyer_input _req" type="phone" name="phone" placeholder="Телефон">
+						</div>
+						<div class="buyer">
+							<h3>
+								Адрес получателя
+							</h3>
+							<input class="buyer_input" type="text" name="country" placeholder="Страна">
+							<input class="buyer_input" type="text" name="city" placeholder="Город">
+							<input class="buyer_input" type="text" name="street" placeholder="Улица">
+							<input class="buyer_input" type="text" name="home" placeholder="Дом">
+							<input class="buyer_input" type="text" name="apartment" placeholder="Квартира">
+						</div>
+						<div class="buyer">
+							<h3>
+								Комментарии
+							</h3>
+							<textarea class="buyer_input" type="text" name="comment" placeholder="Введите текст"></textarea>
+						</div>
+					</div>
+					<div class="block-right col-5">
+						<div class="buyer">
+							<h3 class="title_block-right">
+								Ваш заказ
+							</h3>
+							<div class="table d-flex">
+								<ul class="table_col">
+									<li>
+										<span>
+											Товар
+										</span>
+									</li>
+									<li>
+										Футболка USA
+									</li>
+									<li>
+										Подытог
+									</li>
+									<li class="table_col__li table_col__li-dop">
+										<span>
+											Итого
+										</span>
+									</li>
+								</ul>
+								<ul class="table_col">
+									<li>
+										<span>
+											Всего
+										</span>
+									</li>
+									<li>
+										$129
+									</li>
+									<li>
+										$129
+									</li>
+									<li class="table_col__li">
+										<span>
+											$129
+										</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="form__item">
+							<h3 class="form__label">
+								Левша или правша?
+							</h3>
+							<div class="options__item">
+								<input id="formRightHanded" cheched type="radio" value="right" name="hand" class="options__input">
+								<label for="formRightHanded" class="options__label"><span>Правша</span></label>
+							</div>
+							<div class="options__item">
+								<input id="formRightHanded" type="radio" value="right" name="hand" class="options__input">
+								<label for="formRightHanded" class="options__label"><span>Левша</span></label>
+							</div>
+						</div>
+						<div class="form__item">
+							<h3>
+								Возраст:
+							</h3>
+							<select name="age" class="form__select">
+								<option value="от 18 до 25" selected>
+									Молодой
+								</option>
+								<option value="от 25 до 45">
+									Средний
+								</option>
+								<option value="от 45">
+									Зрелый
+								</option>
+							</select>
+						</div>
+						
+						<div class="form__item">
+							<h3 class="form__label">
+								Прикрепить фото
+							</h3>
+							<div class="file">
+								<div class="file_item">
+									<input id="formImage" accept=".jpg, .png, .gif" name="image" type="file">
+								</div>
+								<div id="formPreview" class="file__preview"></div>
+							</div>
+						</div>
+						
+						<div class="buyer">
+							<h3>
+								Способы оплаты
+							</h3>
+							<div class="d-flex align-items-center">
+								<input id="buyer_checkbox" class="buyer_checkbox _req" type="checkbox" name="checkbox" checked>
+								<lable for="buyer_checkbox" class="buyer_lable">
+									Оплата наличными
+								</lable>
+							</div>
+						</div>
+						<button class="form-btn btn" type="submit">
+							Разместить заказ
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</main>
+	<!-- footer -->
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<nav class="menu-top d-flex">
+					<div class="col-3">
+						<a class="logo" href="#">
+							<img src="img/header/menu/logo_header.svg" alt="Womazing">
+						</a>
+						<p class="credits">
+							© Все права защищены Политика конфиденциальности Публичная оферта
+						</p>
+					</div>
+					<div class="col-lg-7">				
+						<ul class="menu-list d-flex">
+							<li class="menu-list_item">
+								<a class="menu-list_item__link" href="#">
+									Главная
+								</a>
+							</li>
+							<li class="menu-list_item">
+								<a href="#">
+									Магазин
+								</a>
+								<ul class="in-shop">
+									<li class="in-shop_item">
+										<a href="#">
+											Пальто
+										</a>
+									</li>
+									<li class="in-shop_item">
+										<a href="#">
+											Свитшоты
+										</a>
+									</li>
+									<li class="in-shop_item">
+										<a href="#">
+											Кардиганы
+										</a>
+									</li>
+									<li class="in-shop_item">
+										<a href="#">
+											Толстовки
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="menu-list_item">
+								<a href="#">
+									О бренде
+								</a>
+							</li>
+							<li class="menu-list_item">
+								<a href="#">
+									Контакты
+								</a>
+							</li>
+						</ul>			
+					</div>
+					<div class="col-2 d-flex flex-wrap">
+						<div class="footer-block-three">
+							<a class="phone" href="tel:+74958235412">
+								+7 (495) 823-54-12
+							</a>
+							<a class="mail" href="email:hello@womazing.com">
+								hello@womazing.com
+							</a>
+						</div>
+						<div class="resource">
+						<div class="resources d-flex">
+							<!--noindex-->
+								<a class="resources_link" href="#" rel="nofollow noopener noreferrer" target="_blank">
+									<img src="img/footer/instagram.svg" alt="instagram">
+								</a>
+								<a class="resources_link" href="#" rel="nofollow noopener noreferrer" target="_blank">
+									<img src="img/footer/facebook.svg" alt="instagram">
+								</a>
+								<a class="resources_link" href="#" rel="nofollow noopener noreferrer" target="_blank">
+									<img src="img/footer/twitter.svg" alt="instagram">
+								</a>
+							<!--/noindex-->
+						</div>
+							<!--noindex-->
+								<a class="resources_link resources_link__fix" href="#" rel="nofollow noopener noreferrer" target="_blank">
+									<img src="img/footer/visa-mastercard.svg" alt="instagram">
+								</a>
+							<!--/noindex-->
+						</div>
+					</div>	
+				</nav>
+			</div>
+		</div>
+	</footer>
+	<script src="js/main.js"></script>
+</body>
+</html>
